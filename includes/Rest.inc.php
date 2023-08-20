@@ -50,7 +50,7 @@ function wcra_get_status_message($code=200){
 }
 
 
- function wcra_response($code='',$response,$_authintication,$data=array()){
+ function wcra_response($code='',$response,$_authintication = null,$data=array()){
             $_code = ($code)?$code:wcra_http_response_code();
             $opt = array('status' =>wcra_get_status_message($code),'response' => $response , 'code' => $code , 'data' => $data  );
             $create_log = wcra_create_api_log($_authintication,$opt);
